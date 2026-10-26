@@ -1,0 +1,6 @@
+# Shared by run_container.sh and join_container.sh.
+IMAGE_NAME=$(cat Makefile | grep IMAGE_NAME | head -1 | cut -d "=" -f2 | tr -d '[:space:]')
+CONTAINER_NAME=${IMAGE_NAME}_container
+
+# The repository is the colcon workspace, mounted here.
+SBS_WS_CONTAINER=/home/user/sbs_ws

@@ -1,0 +1,13 @@
+# laser_filters chain: drops the spurious returns that appear along the edges of
+# an occluding surface ("shadow" or veiling points), which would otherwise show
+# up as obstacles floating in free space in the planner's obstacle term.
+scan_to_scan_filter_chain:
+  ros__parameters:
+    filter1:
+      name: shadows
+      type: laser_filters/ScanShadowsFilter
+      params:
+        min_angle: 2.0
+        max_angle: 178.0
+        neighbors: 4
+        window: 1

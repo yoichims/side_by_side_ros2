@@ -1,0 +1,3 @@
+# Trigger the subgoal server to (re)publish the collected subgoal list.
+# Carries no payload, exactly as the ROS 1 sbs_motion/sendGoals did.
+---
